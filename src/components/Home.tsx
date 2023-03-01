@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Box from "@mui/material/Box";
-import { Button, Typography } from "@mui/material";
-import TextField from "@mui/material/TextField";
+import { Button, Typography, TextField, Box } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import myDate from "../myDate"; //date
 import axios from "axios";
 import { useTranslation } from "react-i18next"; //i18next
@@ -45,18 +44,34 @@ export default function Home() {
     setDate(myDate(destOffset / 3600).cityDate.slice(0, 17));
   }, [destOffset]);
 
+  const MyTypography = styled(Typography)(() => ({
+    minWidth: "140px",
+    backgroundColor: "rgb(14,23,36)",
+    color: "white",
+    padding: "5px",
+    borderRadius: "5px",
+    marginBottom: "7px",
+  }));
+
+  const MyBox = styled(Box)(() => ({
+    display: "flex",
+    flexWrap: "wrap",
+  }));
+
   return (
     <Box
       sx={{
         width: "100%",
         minHeight: "calc(100vh - 134px)",
-        backgroundColor: "rgb(255, 255, 125)",
+        backgroundColor: "rgb(206, 255, 159)",
         paddingBottom: "30px",
         color: "black",
       }}
     >
       <Box sx={{ padding: "20px", textAlign: "center" }}>
-        <Typography variant="h4">{t("titleHome")}</Typography>
+        <Typography variant="h4" sx={{ textShadow: "1px 1px black" }}>
+          {t("titleHome")}
+        </Typography>
       </Box>
       <Box sx={{ display: "flex", marginLeft: "20px" }}>
         <TextField
@@ -96,35 +111,33 @@ export default function Home() {
       {data.main ? (
         <Box sx={{ margin: "20px" }}>
           <Box sx={{ display: "flex", flexWrap: "wrap", marginBottom: "20px" }}>
-            <Typography sx={{ marginRight: "15px", minWidth: "130px" }}>
-              {city}
-            </Typography>
-            <Typography>{date}</Typography>
+            <MyTypography sx={{ marginRight: "15px" }}>{city}</MyTypography>
+            <MyTypography>{date}</MyTypography>
           </Box>
-          <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-            <Typography sx={{ marginRight: "15px", minWidth: "130px" }}>
+          <MyBox>
+            <MyTypography sx={{ marginRight: "15px" }}>
               {t("temp")}
-            </Typography>
-            <Typography>{temp}&deg;C</Typography>
-          </Box>
-          <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-            <Typography sx={{ marginRight: "15px", minWidth: "130px" }}>
+            </MyTypography>
+            <MyTypography>{temp}&deg;C</MyTypography>
+          </MyBox>
+          <MyBox>
+            <MyTypography sx={{ marginRight: "15px" }}>
               {t("pressure")}
-            </Typography>
-            <Typography>{pressure}</Typography>
-          </Box>
-          <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-            <Typography sx={{ marginRight: "15px", minWidth: "130px" }}>
+            </MyTypography>
+            <MyTypography>{pressure}</MyTypography>
+          </MyBox>
+          <MyBox>
+            <MyTypography sx={{ marginRight: "15px" }}>
               {t("speed")}
-            </Typography>
-            <Typography>{speed}m/s</Typography>
-          </Box>
-          <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-            <Typography sx={{ marginRight: "15px", minWidth: "130px" }}>
+            </MyTypography>
+            <MyTypography>{speed}m/s</MyTypography>
+          </MyBox>
+          <MyBox>
+            <MyTypography sx={{ marginRight: "15px" }}>
               {t("desc")}
-            </Typography>
-            <Typography>{desc}</Typography>
-          </Box>
+            </MyTypography>
+            <MyTypography>{desc}</MyTypography>
+          </MyBox>
         </Box>
       ) : null}
     </Box>

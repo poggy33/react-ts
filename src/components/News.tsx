@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Box from "@mui/material/Box";
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, Box } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
 //redux
-import { useAppSelector } from "../hooks";
-import { useAppDispatch } from "../hooks";
+import { useAppSelector, useAppDispatch } from "../hooks";
 import { showMorePosts, deletePost } from "../store/postSlice";
 //
 import { useTranslation } from "react-i18next"; //i18next
@@ -31,13 +29,12 @@ export default function News() {
       sx={{
         width: "100%",
         minHeight: "calc(100vh - 164px)",
-        color: "darkblue",
-        backgroundColor: "rgb(255, 255, 125)",
+        backgroundColor: "rgb(206, 255, 159)",
         padding: "30px 0",
       }}
     >
       <Box sx={{ textAlign: "center", marginTop: "20px" }}>
-        <Typography sx={{ textShadow: "1px 1px #558ABB" }} variant="h4">
+        <Typography sx={{ textShadow: "1px 1px black" }} variant="h4">
           {t("header")}
         </Typography>
       </Box>

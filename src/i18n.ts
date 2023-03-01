@@ -15,7 +15,7 @@ const translationsEn={
     "search":"search",
     "temp":"Temperature",
     "pressure":"Pressure",
-    "speed":"Speed",
+    "speed":"Wind speed",
     "desc":"Description",
     "text1":"Hello. My name is Ihor Pohaidak and I am a beginner in web development. Although I don't have any commercial experience yet, I'm working hard to develop my skills and knowledge in this field. This project, created according to the conditions of your task, demonstrates my abilities and shows that I have learned.",
     "text2":"In this project, I used several popular technologies and frameworks, including React, React-Redux, @reduxjs/toolkit, react-i18next, TypeScript, react-router-dom, and designed using MUI (Material-UI). These tools allowed me to create a dynamic and interactive web application that demonstrates my ability to design and build user interfaces, manage state, handle routing, implement localization, and create visually appealing designs using MUI components.",

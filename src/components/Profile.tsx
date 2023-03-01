@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useTranslation } from "react-i18next"; //i18next
 
@@ -27,7 +26,7 @@ export default function Profile({ isLoggedIn }: any) {
         width: "100%",
         minHeight: "calc(100vh - 144px)",
         padding: "20px 0",
-        backgroundColor:"rgba(14,23,36,0.9)"
+        backgroundColor: "rgba(14,23,36,0.9)",
       }}
     >
       <MyTypography variant="h6">{t("text1")}</MyTypography>
