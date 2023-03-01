@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import News from "./components/News";
 import Profile from "./components/Profile";
 import Login from "./components/Login";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import axios from "axios";
 import { useAppDispatch } from "./hooks"; //redux
 import { addAllPosts } from "./store/postSlice"; //redux
@@ -54,7 +54,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar
         matches={matches}
         setIsLoggedIn={setIsLoggedIn}
@@ -72,7 +72,7 @@ const App: React.FC = () => {
         />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

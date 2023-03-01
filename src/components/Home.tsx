@@ -52,10 +52,10 @@ export default function Home() {
         minHeight: "calc(100vh - 134px)",
         backgroundColor: "rgb(255, 255, 125)",
         paddingBottom: "30px",
-        color:"darkblue"
+        color: "black",
       }}
     >
-      <Box sx={{padding:"20px", textAlign:"center"}}>
+      <Box sx={{ padding: "20px", textAlign: "center" }}>
         <Typography variant="h4">{t("titleHome")}</Typography>
       </Box>
       <Box sx={{ display: "flex", marginLeft: "20px" }}>
@@ -96,23 +96,33 @@ export default function Home() {
       {data.main ? (
         <Box sx={{ margin: "20px" }}>
           <Box sx={{ display: "flex", flexWrap: "wrap", marginBottom: "20px" }}>
-            <Typography sx={{ marginRight: "15px", minWidth:"130px" }}>{city}</Typography>
+            <Typography sx={{ marginRight: "15px", minWidth: "130px" }}>
+              {city}
+            </Typography>
             <Typography>{date}</Typography>
           </Box>
           <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-            <Typography sx={{ marginRight: "15px", minWidth:"130px" }}>{t("temp")}</Typography>
+            <Typography sx={{ marginRight: "15px", minWidth: "130px" }}>
+              {t("temp")}
+            </Typography>
             <Typography>{temp}&deg;C</Typography>
           </Box>
           <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-            <Typography sx={{ marginRight: "15px", minWidth:"130px" }}>{t("pressure")}</Typography>
+            <Typography sx={{ marginRight: "15px", minWidth: "130px" }}>
+              {t("pressure")}
+            </Typography>
             <Typography>{pressure}</Typography>
           </Box>
           <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-            <Typography sx={{ marginRight: "15px", minWidth:"130px" }}>{t("speed")}</Typography>
+            <Typography sx={{ marginRight: "15px", minWidth: "130px" }}>
+              {t("speed")}
+            </Typography>
             <Typography>{speed}m/s</Typography>
           </Box>
           <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-            <Typography sx={{ marginRight: "15px", minWidth:"130px" }}>{t("desc")}</Typography>
+            <Typography sx={{ marginRight: "15px", minWidth: "130px" }}>
+              {t("desc")}
+            </Typography>
             <Typography>{desc}</Typography>
           </Box>
         </Box>
