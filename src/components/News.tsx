@@ -6,6 +6,7 @@ import { useAppSelector, useAppDispatch } from "../hooks";
 import { showMorePosts, deletePost } from "../store/postSlice";
 //
 import { useTranslation } from "react-i18next"; //i18next
+import newsLogo from "../images/news.png";
 
 export default function News() {
   const [count, setCount] = useState<number>(1);
@@ -28,12 +29,13 @@ export default function News() {
     <Box
       sx={{
         width: "100%",
-        minHeight: "calc(100vh - 164px)",
+        minHeight: "calc(100vh - 134px)",
         backgroundColor: "rgb(206, 255, 159)",
-        padding: "30px 0",
+        padding: "10px 0 20px 0",
       }}
     >
       <Box sx={{ textAlign: "center", marginTop: "20px" }}>
+        <img src={newsLogo} alt="Image" />
         <Typography sx={{ textShadow: "1px 1px black" }} variant="h4">
           {t("header")}
         </Typography>

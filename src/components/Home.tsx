@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import myDate from "../myDate"; //date
 import axios from "axios";
 import { useTranslation } from "react-i18next"; //i18next
+import weatherLogo from "../images/weather.png";
 
 export default function Home() {
   const [location, setLocation] = useState<string>("Ivano-Frankivsk");
@@ -69,6 +70,7 @@ export default function Home() {
       }}
     >
       <Box sx={{ padding: "20px", textAlign: "center" }}>
+        <img src={weatherLogo} alt="Image" />
         <Typography variant="h4" sx={{ textShadow: "1px 1px black" }}>
           {t("titleHome")}
         </Typography>

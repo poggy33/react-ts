@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useTranslation } from "react-i18next"; //i18next
+import profileLogo from "../images/profile.png";
 
 const MyTypography = styled(Typography)(() => ({
   color: "white",
@@ -29,6 +30,9 @@ export default function Profile({ isLoggedIn }: any) {
         backgroundColor: "rgba(14,23,36,0.9)",
       }}
     >
+      <Box sx={{textAlign:"center"}}>
+        <img src={profileLogo} alt="Image" />
+      </Box>
       <MyTypography variant="h6">{t("text1")}</MyTypography>
       <MyTypography variant="h6">{t("text2")}</MyTypography>
       <MyTypography variant="h6">{t("text3")}</MyTypography>
